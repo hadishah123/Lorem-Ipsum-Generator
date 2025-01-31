@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
-          content="width=device-width, 
-                    initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lorem Ipsum Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,61 +15,61 @@
     <main>
         <div class="options">
             <div class="paragraphs">
-                <label for="paragraphs">
-                    Paragraphs:
-                </label>
-                <input type="range" 
-                       id="paragraphs" 
-                       min="1" max="50" 
-                       value="1">
-                <span id="paragraphsValue">
-                    1
-                </span>
+                <label for="paragraphs">Paragraphs:</label>
+                <input type="range" id="paragraphs" min="1" max="50" value="1">
+                <span id="paragraphsValue">1</span>
             </div>
             <div class="words">
-                <label for="words">
-                    Words per Paragraph:
-                </label>
-                <input type="range" 
-                       id="words" 
-                       min="1" 
-                       max="100" 
-                       value="10">
-                <span id="wordsValue">
-                    10
-                </span>
+                <label for="words">Words per Paragraph:</label>
+                <input type="range" id="words" min="1" max="100" value="10">
+                <span id="wordsValue">10</span>
             </div>
             <div class="tags">
-                <label for="tags">
-                    Tag:
-                </label>
-                <select id="tags">
-                </select>
+                <label for="tags">Tag:</label>
+                <select id="tags"></select>
             </div>
             <div class="include">
-                <label for="include">
-                    Include HTML:
-                </label>
+                <label for="include">Include HTML:</label>
                 <select id="include">
-                    <option value="Yes">
-                        Yes
-                    </option>
-                    <option value="No">
-                        No
-                    </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                 </select>
             </div>
-            <button id="generate">
-                Generate Lorem Ipsum
-            </button>
+
+            <!-- New font family and font size options -->
+            <div class="font-family">
+                <label for="fontFamily">Font Family:</label>
+                <select id="fontFamily">
+                    <option value="Arial, sans-serif">Arial</option>
+                    <option value="'Courier New', Courier, monospace">Courier</option>
+                    <option value="'Georgia', serif">Georgia</option>
+                    <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                    <option value="'Roboto', sans-serif">Roboto</option>
+                </select>
+            </div>
+            <div class="font-size">
+                <label for="fontSize">Font Size:</label>
+                <input type="range" id="fontSize" min="12" max="24" value="16">
+                <span id="fontSizeValue">16px</span>
+            </div>
+
+            <!-- New paragraph separator option -->
+            <div class="separator">
+                <label for="separator">Paragraph Separator:</label>
+                <input type="text" id="separator" value="\n" placeholder="e.g., ===">
+            </div>
+
+            <button id="generate">Generate Lorem Ipsum</button>
+            <button id="copy">Copy to Clipboard</button>
+            <button id="saveFile">Save as File</button>
         </div>
+
         <div class="output">
-          
-            <!-- Lorem Ipsum text will
-                 be displayed here -->
+            <!-- Lorem Ipsum text will be displayed here -->
         </div>
     </main>
-    <script src="script.js">  </script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
